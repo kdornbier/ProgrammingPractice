@@ -1,0 +1,573 @@
+<!doctype html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css"</link>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascript/homepage.js"></script>
+<link rel="stylesheet" href="css/default.css"></link>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Good 4 U+I</title>
+  <title>jQuery UI Tabs - Default functionality</title>
+
+<!-- THIS SHOULD BE IN AN EXTERNAL STYLE SHEET -->
+    <style type="text/css">
+    	.imagewrap {position:relative;padding:25px;}
+		.popular.imagewrap {display:inline-block;}
+		.favorite.imagewrap {display:none;}
+		.heart {position:absolute;top:25px;right:75px;}
+		.plus {position:absolute;top:25px;right:25px;}
+		.remove {position:absolute;top:25px;left:25px;}
+		img#preview{
+			outline-style: solid;
+			outline-color: gray;
+		}
+		img#preview{
+			width:304px;height:228px;
+		}
+		div#preview{
+			width:304px;height:48px;overflow:auto;position:absolute;bottom:25px;left:25px;background-color:white;outline-style:solid;outline-color:gray;outline-width:thin;
+		}
+		div.images{
+			height: 570px; overflow:auto; 
+		}
+		span.originalPrice{
+			color: red;
+		}
+		span.currentPrice{
+			color: green;
+		}
+	</style>
+
+	<script>
+	function searchChicken() {
+		if($('.search-input').val() == 'chicken')
+		{
+			$('.not-chicken').css('display', 'none')
+		}
+	}
+	function cancelSearch() {
+		$('.search-input').val('')
+	    $('.popular.not-chicken').css('display', 'inline-block')
+	}
+	function addToFavorite(imgToShow) {
+		$('.'+imgToShow.id).css('display', 'inline-block')
+	}
+	function removeFavorite(imgToRemove) {
+		$('.'+imgToRemove.id).css('display', 'none')
+	}
+	</script>
+
+	<script>
+		function addCake() {
+			document.getElementById("cart-meter").src="images/meter-unhealthy"
+			var cartCost = Number(document.getElementById('cartcost').innerHTML);
+			document.getElementById('cartcost').innerHTML = cartCost + 10;
+		}
+		
+		function addChicken() {
+			document.getElementById("cart-meter").src="images/meter-healthy"
+			var cartCost = Number(document.getElementById('cartcost').innerHTML);
+			document.getElementById('cartcost').innerHTML = cartCost + 10;
+		}
+	</script>
+
+</head>
+
+<body>
+  <div class="container">
+
+<!--   	<div class="row">
+	  <div class="col-xs-12">
+	  	<div class="page-header">
+	  		<h1>Homepage</h1>
+	  	</div>
+	  </div>
+	</div> -->
+
+	<div class="row">
+		<div class="col-xs-12">
+		  <div class="navbar navbar-default">
+		  	<div class="container-fluid">
+			  	<ul class="nav nav-pills">		
+			  		<li>  		
+					  	<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    <span class="glyphicon glyphicon-menu-hamburger"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="homepage.html">Home</a></li>
+						    <li><a href="myCart.html">My Cart</a></li>
+						    <li><a href="savedLists.html">Saved Lists</a></li>
+						    <li><a href="profile.html">Profile</a></li>
+						    <li><a href="about.html">About</a></li>
+						    <li><a href="login.html">Logout</a></li>
+						  </ul>
+						</div>
+					</li>
+			  		<li class="active"><a href="homepage.html"><span class="glyphicon glyphicon-home"></span></a></li>
+			  		<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span></a></li>
+			  		<li class="pull-right">
+			  			<a href="myCart.html">
+			  				Cart&nbsp;&nbsp;&nbsp;&nbsp;$<span id="cartcost">10</span>&nbsp;&nbsp;&nbsp;&nbsp;
+							<img src="images/meter-neutral" id="cart-meter">
+			  			</a>
+			  		</li>
+			  	</ul>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 col-xs-12">
+		  <div id="tabs">
+			  <ul>
+			    <li><a href="#tabs-1">Popular</a></li>
+			    <li><a href="#tabs-2">Favorites</a></li>
+			    <li><a href="#tabs-3">Current Deals</a></li>
+			  </ul>
+			  <div class="pull-right search-bar">
+			  		<button class="btn btn-default" onclick="cancelSearch()" type="button" id="undo-search">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button>
+			  		<input type="text" name="search-criteria" class="search-input">
+			  		<button class="btn btn-default" onclick="searchChicken()" type="button" id="search">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+			  </div>
+			  <div id="tabs-1">
+			    <br>
+			    <br>
+			    <div class="images"</div>
+
+					<div class="popular imagewrap chicken">
+					    <img id="preview" src="images/chicken.jpg" alt="Chicken" usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
+							<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" onclick="addToFavorite(this)" type="button" id="favoriteChicken">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite" onclick="addChicken()">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake"usemap="#cakemap">
+					    <map name="cakemap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-cake.html">
+						</map>
+						<div id="preview">
+							Chocolate Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$8&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" onclick="addToFavorite(this)" type="button" id="favoriteCake">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite" onclick="addCake()">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Pasta Salad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$13&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteSalad">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap chicken">
+					    <img id="preview" src="images/chicken-enchilada.jpg" alt="Enchilada"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Enchiladas&nbsp;&nbsp;$15&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteEnchilada">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Roast Beef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$11&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+			  				Sandwiches
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteSandwich">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Mexican Casserole&nbsp;&nbsp;&nbsp;$16&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteCasserole">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap chicken">
+					    <img id="preview" src="images/chicken-pot-pie.jpg" alt="PotPie"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Pot Pie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoritePotPie">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/pizza.jpg" alt="Pizza"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Pizza&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoritePizza">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Popcorn Shrimp&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteShrimp">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap chicken">
+					    <img id="preview" src="images/chicken-wings.jpg" alt="Wings"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Wings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$11&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteWings">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/soup.jpg" alt="Soup"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Soup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteSoup">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="popular imagewrap not-chicken">
+					    <img id="preview" src="images/salmon.jpg" alt="Salmon"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Salmon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$17&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default heart" type="button" onclick="addToFavorite(this)" type="button" id="favoriteSalmon">
+						    <span class="glyphicon glyphicon-heart"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
+			  </div>
+			  <div id="tabs-2">
+			    <br>
+			    <br>
+			    <div class="images"</div>
+					<div class="favorite imagewrap chicken favoriteChicken">
+					    <img id="preview" src="images/chicken.jpg" alt="Chicken" usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" onclick="removeFavorite(this)" type="button" id="favoriteChicken">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+
+					<div class="favorite imagewrap not-chicken favoriteCake">
+					    <img id="preview" src="images/chocolate-cake.jpg" alt="Cake"usemap="#cakenmap">
+					    <map name="cakenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-cake.html">
+						</map>
+						<div id="preview">
+							Chocolate Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$8&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" onclick="removeFavorite(this)" type="button" id="favoriteCake">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteSalad">
+					    <img id="preview" src="images/greek-pasta-salad.jpg" alt="Salad"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Pasta Salad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$13&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteSalad">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap chicken favoriteEnchilada">
+					    <img id="preview" src="images/chicken-enchilada.jpg" alt="Enchilada"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Enchiladas&nbsp;&nbsp;$15&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteEnchilada">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteSandwich">
+					    <img id="preview" src="images/hot-roast-beef-sandwiches.jpg" alt="Sandwich"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Roast Beef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$11&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+			  				Sandwiches
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteSandwich">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteCasserole">
+					    <img id="preview" src="images/mexican-casserole.jpg" alt="Casserole"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Mexican Casserole&nbsp;&nbsp;&nbsp;$16&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteCasserole">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap chicken favoritePotPie">
+					    <img id="preview" src="images/chicken-pot-pie.jpg" alt="PotPie"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Pot Pie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoritePotPie">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoritePizza">
+					    <img id="preview" src="images/pizza.jpg" alt="Pizza"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Pizza&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoritePizza">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteShrimp">
+					    <img id="preview" src="images/popcorn-shrimp.jpg" alt="Shrimp"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Popcorn Shrimp&nbsp;&nbsp;&nbsp;&nbsp;$10&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteShrimp">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap chicken favoriteWings">
+					    <img id="preview" src="images/chicken-wings.jpg" alt="Wings"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Chicken Wings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$11&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-neutral" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteWings">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteSoup">
+					    <img id="preview" src="images/soup.jpg" alt="Soup"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Soup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteSoup">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="favorite imagewrap not-chicken favoriteSalmon">
+					    <img id="preview" src="images/salmon.jpg" alt="Salmon"usemap="#chickenmap">
+					    <map name="chickenmap">
+						  <area shape="rect" coords="0,0,304,228" alt="full" href="detailedView-chicken.html">
+						</map>
+						<div id="preview">
+							Salmon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$17&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-healthy" style="width:45px;">
+						</div>
+					    <button class="btn btn-default remove" type="button" onclick="removeFavorite(this)" type="button" id="favoriteSalmon">
+						    <span class="glyphicon glyphicon-remove"></span>
+						</button>
+						<button class="btn btn-default plus" type="button" id="favorite">
+						    <span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
+			  </div>
+			  <div id="tabs-3">
+			  	<p>Here are the deals at your selected preferred grocery store.</p>
+			    <div class="popular imagewrap chicken">
+				    <img id="preview" src="images/raw-chicken.jpg" alt="Chicken">
+					<div id="preview">
+						Chicken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="originalPrice">Original: $6</span>&nbsp;&nbsp;&nbsp;<span class="currentPrice">Now: $5</span>
+					</div>
+					<button class="btn btn-default plus" type="button" id="favorite">
+					    <span class="glyphicon glyphicon-plus"></span>
+					</button>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-sm">
+		  <div class="panel panel-default">
+		  	<div class="panel-body">
+		  		<h4>Fall 2015 Human Computer Interaction</h1>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+img#preview{
+	outline-style: solid;
+	outline-color: gray;
+	outline-width: thin;
+}
+
+
+.imagewrap {display:inline-block;position:relative;}
+.button1 {position:absolute;bottom:0;left:0;}
+.button2 {position:absolute;bottom:0;right:0;}
+.button3 {position:absolute;right:50%;top:50%;}

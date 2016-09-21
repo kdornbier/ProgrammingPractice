@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C64E10E18DA38D9008E1432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E10D18DA38D9008E1432 /* Foundation.framework */; };
+		2C64E11018DA38D9008E1432 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E10F18DA38D9008E1432 /* CoreGraphics.framework */; };
+		2C64E11218DA38D9008E1432 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E11118DA38D9008E1432 /* UIKit.framework */; };
+		2C64E11818DA38D9008E1432 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C64E11618DA38D9008E1432 /* InfoPlist.strings */; };
+		2C64E11A18DA38D9008E1432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C64E11918DA38D9008E1432 /* main.m */; };
+		2C64E11E18DA38D9008E1432 /* DPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C64E11D18DA38D9008E1432 /* DPAppDelegate.m */; };
+		2C64E12118DA38D9008E1432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C64E11F18DA38D9008E1432 /* Main.storyboard */; };
+		2C64E12418DA38D9008E1432 /* DPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C64E12318DA38D9008E1432 /* DPViewController.m */; };
+		2C64E12618DA38D9008E1432 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C64E12518DA38D9008E1432 /* Images.xcassets */; };
+		2C64E12D18DA38D9008E1432 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E12C18DA38D9008E1432 /* XCTest.framework */; };
+		2C64E12E18DA38D9008E1432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E10D18DA38D9008E1432 /* Foundation.framework */; };
+		2C64E12F18DA38D9008E1432 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64E11118DA38D9008E1432 /* UIKit.framework */; };
+		2C64E13718DA38D9008E1432 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C64E13518DA38D9008E1432 /* InfoPlist.strings */; };
+		2C64E13918DA38D9008E1432 /* Dynamics_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C64E13818DA38D9008E1432 /* Dynamics_ProjectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C64E13018DA38D9008E1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C64E10218DA38D9008E1432 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C64E10918DA38D9008E1432;
+			remoteInfo = "Dynamics Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C64E10A18DA38D9008E1432 /* Ping Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ping Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C64E10D18DA38D9008E1432 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C64E10F18DA38D9008E1432 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C64E11118DA38D9008E1432 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C64E11518DA38D9008E1432 /* Ping Classic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ping Classic-Info.plist"; sourceTree = "<group>"; };
+		2C64E11718DA38D9008E1432 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C64E11918DA38D9008E1432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C64E11B18DA38D9008E1432 /* Ping Classic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ping Classic-Prefix.pch"; sourceTree = "<group>"; };
+		2C64E11C18DA38D9008E1432 /* DPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPAppDelegate.h; sourceTree = "<group>"; };
+		2C64E11D18DA38D9008E1432 /* DPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPAppDelegate.m; sourceTree = "<group>"; };
+		2C64E12018DA38D9008E1432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C64E12218DA38D9008E1432 /* DPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPViewController.h; sourceTree = "<group>"; };
+		2C64E12318DA38D9008E1432 /* DPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPViewController.m; sourceTree = "<group>"; };
+		2C64E12518DA38D9008E1432 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C64E12B18DA38D9008E1432 /* Ping ClassicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ping ClassicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C64E12C18DA38D9008E1432 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2C64E13418DA38D9008E1432 /* Ping ClassicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ping ClassicTests-Info.plist"; sourceTree = "<group>"; };
+		2C64E13618DA38D9008E1432 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C64E13818DA38D9008E1432 /* Dynamics_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dynamics_ProjectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C64E10718DA38D9008E1432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E11018DA38D9008E1432 /* CoreGraphics.framework in Frameworks */,
+				2C64E11218DA38D9008E1432 /* UIKit.framework in Frameworks */,
+				2C64E10E18DA38D9008E1432 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C64E12818DA38D9008E1432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E12D18DA38D9008E1432 /* XCTest.framework in Frameworks */,
+				2C64E12F18DA38D9008E1432 /* UIKit.framework in Frameworks */,
+				2C64E12E18DA38D9008E1432 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C64E10118DA38D8008E1432 = {
+			isa = PBXGroup;
+			children = (
+				2C64E11318DA38D9008E1432 /* Dynamics Project */,
+				2C64E13218DA38D9008E1432 /* Dynamics ProjectTests */,
+				2C64E10C18DA38D9008E1432 /* Frameworks */,
+				2C64E10B18DA38D9008E1432 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C64E10B18DA38D9008E1432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E10A18DA38D9008E1432 /* Ping Classic.app */,
+				2C64E12B18DA38D9008E1432 /* Ping ClassicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C64E10C18DA38D9008E1432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E10D18DA38D9008E1432 /* Foundation.framework */,
+				2C64E10F18DA38D9008E1432 /* CoreGraphics.framework */,
+				2C64E11118DA38D9008E1432 /* UIKit.framework */,
+				2C64E12C18DA38D9008E1432 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C64E11318DA38D9008E1432 /* Dynamics Project */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E11C18DA38D9008E1432 /* DPAppDelegate.h */,
+				2C64E11D18DA38D9008E1432 /* DPAppDelegate.m */,
+				2C64E11F18DA38D9008E1432 /* Main.storyboard */,
+				2C64E12218DA38D9008E1432 /* DPViewController.h */,
+				2C64E12318DA38D9008E1432 /* DPViewController.m */,
+				2C64E12518DA38D9008E1432 /* Images.xcassets */,
+				2C64E11418DA38D9008E1432 /* Supporting Files */,
+			);
+			path = "Dynamics Project";
+			sourceTree = "<group>";
+		};
+		2C64E11418DA38D9008E1432 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E11518DA38D9008E1432 /* Ping Classic-Info.plist */,
+				2C64E11618DA38D9008E1432 /* InfoPlist.strings */,
+				2C64E11918DA38D9008E1432 /* main.m */,
+				2C64E11B18DA38D9008E1432 /* Ping Classic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C64E13218DA38D9008E1432 /* Dynamics ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E13818DA38D9008E1432 /* Dynamics_ProjectTests.m */,
+				2C64E13318DA38D9008E1432 /* Supporting Files */,
+			);
+			path = "Dynamics ProjectTests";
+			sourceTree = "<group>";
+		};
+		2C64E13318DA38D9008E1432 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C64E13418DA38D9008E1432 /* Ping ClassicTests-Info.plist */,
+				2C64E13518DA38D9008E1432 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C64E10918DA38D9008E1432 /* Ping Classic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C64E13C18DA38D9008E1432 /* Build configuration list for PBXNativeTarget "Ping Classic" */;
+			buildPhases = (
+				2C64E10618DA38D9008E1432 /* Sources */,
+				2C64E10718DA38D9008E1432 /* Frameworks */,
+				2C64E10818DA38D9008E1432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ping Classic";
+			productName = "Dynamics Project";
+			productReference = 2C64E10A18DA38D9008E1432 /* Ping Classic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C64E12A18DA38D9008E1432 /* Ping ClassicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C64E13F18DA38D9008E1432 /* Build configuration list for PBXNativeTarget "Ping ClassicTests" */;
+			buildPhases = (
+				2C64E12718DA38D9008E1432 /* Sources */,
+				2C64E12818DA38D9008E1432 /* Frameworks */,
+				2C64E12918DA38D9008E1432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C64E13118DA38D9008E1432 /* PBXTargetDependency */,
+			);
+			name = "Ping ClassicTests";
+			productName = "Dynamics ProjectTests";
+			productReference = 2C64E12B18DA38D9008E1432 /* Ping ClassicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C64E10218DA38D9008E1432 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kaitlyn Dornbier";
+				TargetAttributes = {
+					2C64E12A18DA38D9008E1432 = {
+						TestTargetID = 2C64E10918DA38D9008E1432;
+					};
+				};
+			};
+			buildConfigurationList = 2C64E10518DA38D9008E1432 /* Build configuration list for PBXProject "Ping Classic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C64E10118DA38D8008E1432;
+			productRefGroup = 2C64E10B18DA38D9008E1432 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C64E10918DA38D9008E1432 /* Ping Classic */,
+				2C64E12A18DA38D9008E1432 /* Ping ClassicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C64E10818DA38D9008E1432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E12618DA38D9008E1432 /* Images.xcassets in Resources */,
+				2C64E11818DA38D9008E1432 /* InfoPlist.strings in Resources */,
+				2C64E12118DA38D9008E1432 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C64E12918DA38D9008E1432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E13718DA38D9008E1432 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C64E10618DA38D9008E1432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E11E18DA38D9008E1432 /* DPAppDelegate.m in Sources */,
+				2C64E12418DA38D9008E1432 /* DPViewController.m in Sources */,
+				2C64E11A18DA38D9008E1432 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C64E12718DA38D9008E1432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64E13918DA38D9008E1432 /* Dynamics_ProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C64E13118DA38D9008E1432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C64E10918DA38D9008E1432 /* Ping Classic */;
+			targetProxy = 2C64E13018DA38D9008E1432 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C64E11618DA38D9008E1432 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C64E11718DA38D9008E1432 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C64E11F18DA38D9008E1432 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C64E12018DA38D9008E1432 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C64E13518DA38D9008E1432 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C64E13618DA38D9008E1432 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C64E13A18DA38D9008E1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C64E13B18DA38D9008E1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C64E13D18DA38D9008E1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dynamics Project/Ping Classic-Prefix.pch";
+				INFOPLIST_FILE = "Dynamics Project/Ping Classic-Info.plist";
+				PRODUCT_NAME = "Ping Classic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2C64E13E18DA38D9008E1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dynamics Project/Ping Classic-Prefix.pch";
+				INFOPLIST_FILE = "Dynamics Project/Ping Classic-Info.plist";
+				PRODUCT_NAME = "Ping Classic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2C64E14018DA38D9008E1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dynamics Project.app/Dynamics Project";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dynamics Project/Dynamics Project-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dynamics ProjectTests/Ping ClassicTests-Info.plist";
+				PRODUCT_NAME = "Ping ClassicTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2C64E14118DA38D9008E1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dynamics Project.app/Dynamics Project";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dynamics Project/Dynamics Project-Prefix.pch";
+				INFOPLIST_FILE = "Dynamics ProjectTests/Ping ClassicTests-Info.plist";
+				PRODUCT_NAME = "Ping ClassicTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C64E10518DA38D9008E1432 /* Build configuration list for PBXProject "Ping Classic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C64E13A18DA38D9008E1432 /* Debug */,
+				2C64E13B18DA38D9008E1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C64E13C18DA38D9008E1432 /* Build configuration list for PBXNativeTarget "Ping Classic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C64E13D18DA38D9008E1432 /* Debug */,
+				2C64E13E18DA38D9008E1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C64E13F18DA38D9008E1432 /* Build configuration list for PBXNativeTarget "Ping ClassicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C64E14018DA38D9008E1432 /* Debug */,
+				2C64E14118DA38D9008E1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C64E10218DA38D9008E1432 /* Project object */;
+}

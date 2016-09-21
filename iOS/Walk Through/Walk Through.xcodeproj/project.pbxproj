@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B2955FA18BC624000C31A41 /* TourInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2955F918BC624000C31A41 /* TourInfoViewController.m */; };
+		2B4313E318C4EE2D000890F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4313E218C4EE2D000890F3 /* MapKit.framework */; };
+		2B65165918EF680A00B18840 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65165818EF680A00B18840 /* SpinnerView.m */; };
+		2B65165C18F08A5F00B18840 /* FriendSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65165B18F08A5F00B18840 /* FriendSearchResultsViewController.m */; };
+		2B65165F18F098DD00B18840 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65165E18F098DD00B18840 /* UserViewController.m */; };
+		2B65166118F0A58E00B18840 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B65166018F0A58E00B18840 /* MessageUI.framework */; };
+		2B65F38418F21DFA00BCDCEB /* ContactOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65F38318F21DFA00BCDCEB /* ContactOwnerViewController.m */; };
+		2B7199A518CC1DFE0004732C /* SearchCriteriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7199A418CC1DFE0004732C /* SearchCriteriaViewController.m */; };
+		2B7A84F618B6663800AD1C12 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7A84F518B6663800AD1C12 /* libsqlite3.dylib */; };
+		2B84CDB918EE890D00A06360 /* TourMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B84CDB818EE890D00A06360 /* TourMapViewViewController.m */; };
+		2B85594C18ED0B70000CBB73 /* Virtual_Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B85594B18ED0B70000CBB73 /* Virtual_Tour.m */; };
+		2B85594F18ED0C04000CBB73 /* Virtual_TourCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B85594E18ED0C04000CBB73 /* Virtual_TourCreator.m */; };
+		2B85595218ED0CA5000CBB73 /* Virtual_TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B85595118ED0CA5000CBB73 /* Virtual_TourViewController.m */; };
+		2B85595518ED0D0C000CBB73 /* Virtual_TourViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B85595418ED0D0C000CBB73 /* Virtual_TourViewPoint.m */; };
+		2B8BCC3A18C553A700358E07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8BCC3918C553A700358E07 /* QuartzCore.framework */; };
+		2BCD204F18B039C400644813 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD204E18B039C400644813 /* RegistrationViewController.m */; };
+		2BCD205218B03B3300644813 /* ProfileManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD205118B03B3300644813 /* ProfileManagement.m */; };
+		2BCD205518B042C700644813 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD205418B042C700644813 /* ProfileViewController.m */; };
+		2BCD225518B061FD00644813 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD225418B061FD00644813 /* EditProfileViewController.m */; };
+		2BE6626018C44AB800947B36 /* TourSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6625F18C44AB800947B36 /* TourSearchResultsViewController.m */; };
+		2BF2480818F357D5007A9346 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF2480718F357D5007A9346 /* CoreLocation.framework */; };
+		2BF2480B18F36E93007A9346 /* MyTourResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2480A18F36E93007A9346 /* MyTourResultsViewController.m */; };
+		2BF2480E18F36F31007A9346 /* MyTourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2480D18F36F31007A9346 /* MyTourDetailViewController.m */; };
+		2BFE8B3A18A47940002B2670 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B3918A47940002B2670 /* Foundation.framework */; };
+		2BFE8B3C18A47940002B2670 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B3B18A47940002B2670 /* CoreGraphics.framework */; };
+		2BFE8B3E18A47940002B2670 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B3D18A47940002B2670 /* UIKit.framework */; };
+		2BFE8B4418A47940002B2670 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE8B4218A47940002B2670 /* InfoPlist.strings */; };
+		2BFE8B4618A47940002B2670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE8B4518A47940002B2670 /* main.m */; };
+		2BFE8B4A18A47940002B2670 /* Walk_ThroughAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE8B4918A47940002B2670 /* Walk_ThroughAppDelegate.m */; };
+		2BFE8B4D18A47940002B2670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE8B4B18A47940002B2670 /* Main.storyboard */; };
+		2BFE8B5018A47940002B2670 /* Walk_ThroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE8B4F18A47940002B2670 /* Walk_ThroughViewController.m */; };
+		2BFE8B5218A47940002B2670 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE8B5118A47940002B2670 /* Images.xcassets */; };
+		2BFE8B5918A47940002B2670 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B5818A47940002B2670 /* XCTest.framework */; };
+		2BFE8B5A18A47940002B2670 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B3918A47940002B2670 /* Foundation.framework */; };
+		2BFE8B5B18A47940002B2670 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE8B3D18A47940002B2670 /* UIKit.framework */; };
+		2BFE8B6318A47940002B2670 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE8B6118A47940002B2670 /* InfoPlist.strings */; };
+		2BFE8B6518A47940002B2670 /* Walk_ThroughTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE8B6418A47940002B2670 /* Walk_ThroughTests.m */; };
+		2C45051118F3E31800B977A1 /* TakeTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C45051018F3E31800B977A1 /* TakeTourViewController.m */; };
+		2C45051418F3E33C00B977A1 /* TakeTourNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C45051318F3E33C00B977A1 /* TakeTourNavigator.m */; };
+		2C45051618F3ECFB00B977A1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C45051518F3ECFB00B977A1 /* FacebookSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BFE8B5C18A47940002B2670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFE8B2E18A47940002B2670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFE8B3518A47940002B2670;
+			remoteInfo = "Walk Through";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B2955F818BC624000C31A41 /* TourInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourInfoViewController.h; sourceTree = "<group>"; };
+		2B2955F918BC624000C31A41 /* TourInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourInfoViewController.m; sourceTree = "<group>"; };
+		2B4313E218C4EE2D000890F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2B65165718EF680A00B18840 /* SpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerView.h; sourceTree = "<group>"; };
+		2B65165818EF680A00B18840 /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerView.m; sourceTree = "<group>"; };
+		2B65165A18F08A5F00B18840 /* FriendSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendSearchResultsViewController.h; sourceTree = "<group>"; };
+		2B65165B18F08A5F00B18840 /* FriendSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSearchResultsViewController.m; sourceTree = "<group>"; };
+		2B65165D18F098DD00B18840 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		2B65165E18F098DD00B18840 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		2B65166018F0A58E00B18840 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2B65F38218F21DFA00BCDCEB /* ContactOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactOwnerViewController.h; sourceTree = "<group>"; };
+		2B65F38318F21DFA00BCDCEB /* ContactOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactOwnerViewController.m; sourceTree = "<group>"; };
+		2B7199A318CC1DFE0004732C /* SearchCriteriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchCriteriaViewController.h; path = ../SearchCriteriaViewController.h; sourceTree = "<group>"; };
+		2B7199A418CC1DFE0004732C /* SearchCriteriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchCriteriaViewController.m; path = ../SearchCriteriaViewController.m; sourceTree = "<group>"; };
+		2B7A84F518B6663800AD1C12 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2B84CDB718EE890D00A06360 /* TourMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourMapViewViewController.h; sourceTree = "<group>"; };
+		2B84CDB818EE890D00A06360 /* TourMapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourMapViewViewController.m; sourceTree = "<group>"; };
+		2B85594A18ED0B70000CBB73 /* Virtual_Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtual_Tour.h; sourceTree = "<group>"; };
+		2B85594B18ED0B70000CBB73 /* Virtual_Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Virtual_Tour.m; sourceTree = "<group>"; };
+		2B85594D18ED0C04000CBB73 /* Virtual_TourCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtual_TourCreator.h; sourceTree = "<group>"; };
+		2B85594E18ED0C04000CBB73 /* Virtual_TourCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Virtual_TourCreator.m; sourceTree = "<group>"; };
+		2B85595018ED0CA5000CBB73 /* Virtual_TourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtual_TourViewController.h; sourceTree = "<group>"; };
+		2B85595118ED0CA5000CBB73 /* Virtual_TourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Virtual_TourViewController.m; sourceTree = "<group>"; };
+		2B85595318ED0D0C000CBB73 /* Virtual_TourViewPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtual_TourViewPoint.h; sourceTree = "<group>"; };
+		2B85595418ED0D0C000CBB73 /* Virtual_TourViewPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Virtual_TourViewPoint.m; sourceTree = "<group>"; };
+		2B8BCC3918C553A700358E07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2BB9DB4418A9B3910052374E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = ../../../Development/GoogleSDK/GoogleOpenSource.framework; sourceTree = "<group>"; };
+		2BB9DB4518A9B3910052374E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = ../../../Development/GoogleSDK/GooglePlus.framework; sourceTree = "<group>"; };
+		2BCD204D18B039C400644813 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		2BCD204E18B039C400644813 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		2BCD205018B03B3300644813 /* ProfileManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileManagement.h; path = ../ProfileManagement.h; sourceTree = "<group>"; };
+		2BCD205118B03B3300644813 /* ProfileManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileManagement.m; path = ../ProfileManagement.m; sourceTree = "<group>"; };
+		2BCD205318B042C700644813 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		2BCD205418B042C700644813 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		2BCD224E18B05C7A00644813 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Development/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		2BCD225318B061FD00644813 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = ../EditProfileViewController.h; sourceTree = "<group>"; };
+		2BCD225418B061FD00644813 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = ../EditProfileViewController.m; sourceTree = "<group>"; };
+		2BE6625E18C44AB800947B36 /* TourSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TourSearchResultsViewController.h; path = ../TourSearchResultsViewController.h; sourceTree = "<group>"; };
+		2BE6625F18C44AB800947B36 /* TourSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TourSearchResultsViewController.m; path = ../TourSearchResultsViewController.m; sourceTree = "<group>"; };
+		2BF2480718F357D5007A9346 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2BF2480918F36E93007A9346 /* MyTourResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTourResultsViewController.h; sourceTree = "<group>"; };
+		2BF2480A18F36E93007A9346 /* MyTourResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTourResultsViewController.m; sourceTree = "<group>"; };
+		2BF2480C18F36F31007A9346 /* MyTourDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTourDetailViewController.h; sourceTree = "<group>"; };
+		2BF2480D18F36F31007A9346 /* MyTourDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTourDetailViewController.m; sourceTree = "<group>"; };
+		2BFE8B3618A47940002B2670 /* Walk Through.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk Through.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFE8B3918A47940002B2670 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BFE8B3B18A47940002B2670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BFE8B3D18A47940002B2670 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2BFE8B4118A47940002B2670 /* Walk Through-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walk Through-Info.plist"; sourceTree = "<group>"; };
+		2BFE8B4318A47940002B2670 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BFE8B4518A47940002B2670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BFE8B4718A47940002B2670 /* Walk Through-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walk Through-Prefix.pch"; sourceTree = "<group>"; };
+		2BFE8B4818A47940002B2670 /* Walk_ThroughAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Walk_ThroughAppDelegate.h; sourceTree = "<group>"; };
+		2BFE8B4918A47940002B2670 /* Walk_ThroughAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Walk_ThroughAppDelegate.m; sourceTree = "<group>"; };
+		2BFE8B4C18A47940002B2670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BFE8B4E18A47940002B2670 /* Walk_ThroughViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Walk_ThroughViewController.h; sourceTree = "<group>"; };
+		2BFE8B4F18A47940002B2670 /* Walk_ThroughViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Walk_ThroughViewController.m; sourceTree = "<group>"; };
+		2BFE8B5118A47940002B2670 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2BFE8B5718A47940002B2670 /* Walk ThroughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk ThroughTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFE8B5818A47940002B2670 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2BFE8B6018A47940002B2670 /* Walk ThroughTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walk ThroughTests-Info.plist"; sourceTree = "<group>"; };
+		2BFE8B6218A47940002B2670 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BFE8B6418A47940002B2670 /* Walk_ThroughTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Walk_ThroughTests.m; sourceTree = "<group>"; };
+		2C45050F18F3E31800B977A1 /* TakeTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeTourViewController.h; sourceTree = "<group>"; };
+		2C45051018F3E31800B977A1 /* TakeTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeTourViewController.m; sourceTree = "<group>"; };
+		2C45051218F3E33C00B977A1 /* TakeTourNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeTourNavigator.h; sourceTree = "<group>"; };
+		2C45051318F3E33C00B977A1 /* TakeTourNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeTourNavigator.m; sourceTree = "<group>"; };
+		2C45051518F3ECFB00B977A1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Development/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BFE8B3318A47940002B2670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C45051618F3ECFB00B977A1 /* FacebookSDK.framework in Frameworks */,
+				2BF2480818F357D5007A9346 /* CoreLocation.framework in Frameworks */,
+				2B65166118F0A58E00B18840 /* MessageUI.framework in Frameworks */,
+				2B8BCC3A18C553A700358E07 /* QuartzCore.framework in Frameworks */,
+				2B4313E318C4EE2D000890F3 /* MapKit.framework in Frameworks */,
+				2B7A84F618B6663800AD1C12 /* libsqlite3.dylib in Frameworks */,
+				2BFE8B3C18A47940002B2670 /* CoreGraphics.framework in Frameworks */,
+				2BFE8B3E18A47940002B2670 /* UIKit.framework in Frameworks */,
+				2BFE8B3A18A47940002B2670 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFE8B5418A47940002B2670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFE8B5918A47940002B2670 /* XCTest.framework in Frameworks */,
+				2BFE8B5B18A47940002B2670 /* UIKit.framework in Frameworks */,
+				2BFE8B5A18A47940002B2670 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BFE8B2D18A47940002B2670 = {
+			isa = PBXGroup;
+			children = (
+				2BFE8B3F18A47940002B2670 /* Walk Through */,
+				2BFE8B5E18A47940002B2670 /* Walk ThroughTests */,
+				2BFE8B3818A47940002B2670 /* Frameworks */,
+				2BFE8B3718A47940002B2670 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BFE8B3718A47940002B2670 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE8B3618A47940002B2670 /* Walk Through.app */,
+				2BFE8B5718A47940002B2670 /* Walk ThroughTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BFE8B3818A47940002B2670 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C45051518F3ECFB00B977A1 /* FacebookSDK.framework */,
+				2BF2480718F357D5007A9346 /* CoreLocation.framework */,
+				2B65166018F0A58E00B18840 /* MessageUI.framework */,
+				2B8BCC3918C553A700358E07 /* QuartzCore.framework */,
+				2B4313E218C4EE2D000890F3 /* MapKit.framework */,
+				2B7A84F518B6663800AD1C12 /* libsqlite3.dylib */,
+				2BCD224E18B05C7A00644813 /* FacebookSDK.framework */,
+				2BB9DB4418A9B3910052374E /* GoogleOpenSource.framework */,
+				2BB9DB4518A9B3910052374E /* GooglePlus.framework */,
+				2BFE8B3918A47940002B2670 /* Foundation.framework */,
+				2BFE8B3B18A47940002B2670 /* CoreGraphics.framework */,
+				2BFE8B3D18A47940002B2670 /* UIKit.framework */,
+				2BFE8B5818A47940002B2670 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BFE8B3F18A47940002B2670 /* Walk Through */ = {
+			isa = PBXGroup;
+			children = (
+				2B7199A318CC1DFE0004732C /* SearchCriteriaViewController.h */,
+				2B7199A418CC1DFE0004732C /* SearchCriteriaViewController.m */,
+				2BE6625E18C44AB800947B36 /* TourSearchResultsViewController.h */,
+				2BE6625F18C44AB800947B36 /* TourSearchResultsViewController.m */,
+				2BCD225318B061FD00644813 /* EditProfileViewController.h */,
+				2BCD225418B061FD00644813 /* EditProfileViewController.m */,
+				2BFE8B4818A47940002B2670 /* Walk_ThroughAppDelegate.h */,
+				2BFE8B4918A47940002B2670 /* Walk_ThroughAppDelegate.m */,
+				2BCD205018B03B3300644813 /* ProfileManagement.h */,
+				2BCD205118B03B3300644813 /* ProfileManagement.m */,
+				2BCD205318B042C700644813 /* ProfileViewController.h */,
+				2BCD205418B042C700644813 /* ProfileViewController.m */,
+				2BFE8B4B18A47940002B2670 /* Main.storyboard */,
+				2B65F38218F21DFA00BCDCEB /* ContactOwnerViewController.h */,
+				2B65F38318F21DFA00BCDCEB /* ContactOwnerViewController.m */,
+				2B65165D18F098DD00B18840 /* UserViewController.h */,
+				2B65165E18F098DD00B18840 /* UserViewController.m */,
+				2BFE8B4E18A47940002B2670 /* Walk_ThroughViewController.h */,
+				2BFE8B4F18A47940002B2670 /* Walk_ThroughViewController.m */,
+				2BCD204D18B039C400644813 /* RegistrationViewController.h */,
+				2BCD204E18B039C400644813 /* RegistrationViewController.m */,
+				2B2955F818BC624000C31A41 /* TourInfoViewController.h */,
+				2B2955F918BC624000C31A41 /* TourInfoViewController.m */,
+				2C45050F18F3E31800B977A1 /* TakeTourViewController.h */,
+				2C45051018F3E31800B977A1 /* TakeTourViewController.m */,
+				2C45051218F3E33C00B977A1 /* TakeTourNavigator.h */,
+				2C45051318F3E33C00B977A1 /* TakeTourNavigator.m */,
+				2BFE8B5118A47940002B2670 /* Images.xcassets */,
+				2BFE8B4018A47940002B2670 /* Supporting Files */,
+				2B85594A18ED0B70000CBB73 /* Virtual_Tour.h */,
+				2B85594B18ED0B70000CBB73 /* Virtual_Tour.m */,
+				2B85594D18ED0C04000CBB73 /* Virtual_TourCreator.h */,
+				2B85594E18ED0C04000CBB73 /* Virtual_TourCreator.m */,
+				2B85595018ED0CA5000CBB73 /* Virtual_TourViewController.h */,
+				2B85595118ED0CA5000CBB73 /* Virtual_TourViewController.m */,
+				2B85595318ED0D0C000CBB73 /* Virtual_TourViewPoint.h */,
+				2B85595418ED0D0C000CBB73 /* Virtual_TourViewPoint.m */,
+				2B84CDB718EE890D00A06360 /* TourMapViewViewController.h */,
+				2B84CDB818EE890D00A06360 /* TourMapViewViewController.m */,
+				2B65165718EF680A00B18840 /* SpinnerView.h */,
+				2B65165818EF680A00B18840 /* SpinnerView.m */,
+				2B65165A18F08A5F00B18840 /* FriendSearchResultsViewController.h */,
+				2B65165B18F08A5F00B18840 /* FriendSearchResultsViewController.m */,
+				2BF2480918F36E93007A9346 /* MyTourResultsViewController.h */,
+				2BF2480A18F36E93007A9346 /* MyTourResultsViewController.m */,
+				2BF2480C18F36F31007A9346 /* MyTourDetailViewController.h */,
+				2BF2480D18F36F31007A9346 /* MyTourDetailViewController.m */,
+			);
+			path = "Walk Through";
+			sourceTree = "<group>";
+		};
+		2BFE8B4018A47940002B2670 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE8B4118A47940002B2670 /* Walk Through-Info.plist */,
+				2BFE8B4218A47940002B2670 /* InfoPlist.strings */,
+				2BFE8B4518A47940002B2670 /* main.m */,
+				2BFE8B4718A47940002B2670 /* Walk Through-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BFE8B5E18A47940002B2670 /* Walk ThroughTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE8B6418A47940002B2670 /* Walk_ThroughTests.m */,
+				2BFE8B5F18A47940002B2670 /* Supporting Files */,
+			);
+			path = "Walk ThroughTests";
+			sourceTree = "<group>";
+		};
+		2BFE8B5F18A47940002B2670 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE8B6018A47940002B2670 /* Walk ThroughTests-Info.plist */,
+				2BFE8B6118A47940002B2670 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BFE8B3518A47940002B2670 /* Walk Through */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFE8B6818A47940002B2670 /* Build configuration list for PBXNativeTarget "Walk Through" */;
+			buildPhases = (
+				2BFE8B3218A47940002B2670 /* Sources */,
+				2BFE8B3318A47940002B2670 /* Frameworks */,
+				2BFE8B3418A47940002B2670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Walk Through";
+			productName = "Walk Through";
+			productReference = 2BFE8B3618A47940002B2670 /* Walk Through.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BFE8B5618A47940002B2670 /* Walk ThroughTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFE8B6B18A47940002B2670 /* Build configuration list for PBXNativeTarget "Walk ThroughTests" */;
+			buildPhases = (
+				2BFE8B5318A47940002B2670 /* Sources */,
+				2BFE8B5418A47940002B2670 /* Frameworks */,
+				2BFE8B5518A47940002B2670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BFE8B5D18A47940002B2670 /* PBXTargetDependency */,
+			);
+			name = "Walk ThroughTests";
+			productName = "Walk ThroughTests";
+			productReference = 2BFE8B5718A47940002B2670 /* Walk ThroughTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BFE8B2E18A47940002B2670 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "Walk Through";
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nate Halbmaier";
+				TargetAttributes = {
+					2BFE8B5618A47940002B2670 = {
+						TestTargetID = 2BFE8B3518A47940002B2670;
+					};
+				};
+			};
+			buildConfigurationList = 2BFE8B3118A47940002B2670 /* Build configuration list for PBXProject "Walk Through" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				he,
+			);
+			mainGroup = 2BFE8B2D18A47940002B2670;
+			productRefGroup = 2BFE8B3718A47940002B2670 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BFE8B3518A47940002B2670 /* Walk Through */,
+				2BFE8B5618A47940002B2670 /* Walk ThroughTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BFE8B3418A47940002B2670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFE8B5218A47940002B2670 /* Images.xcassets in Resources */,
+				2BFE8B4418A47940002B2670 /* InfoPlist.strings in Resources */,
+				2BFE8B4D18A47940002B2670 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFE8B5518A47940002B2670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFE8B6318A47940002B2670 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BFE8B3218A47940002B2670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2955FA18BC624000C31A41 /* TourInfoViewController.m in Sources */,
+				2B7199A518CC1DFE0004732C /* SearchCriteriaViewController.m in Sources */,
+				2BFE8B4618A47940002B2670 /* main.m in Sources */,
+				2B65F38418F21DFA00BCDCEB /* ContactOwnerViewController.m in Sources */,
+				2B84CDB918EE890D00A06360 /* TourMapViewViewController.m in Sources */,
+				2BCD205218B03B3300644813 /* ProfileManagement.m in Sources */,
+				2B65165C18F08A5F00B18840 /* FriendSearchResultsViewController.m in Sources */,
+				2BE6626018C44AB800947B36 /* TourSearchResultsViewController.m in Sources */,
+				2BCD225518B061FD00644813 /* EditProfileViewController.m in Sources */,
+				2BCD204F18B039C400644813 /* RegistrationViewController.m in Sources */,
+				2B65165F18F098DD00B18840 /* UserViewController.m in Sources */,
+				2B85595218ED0CA5000CBB73 /* Virtual_TourViewController.m in Sources */,
+				2BF2480E18F36F31007A9346 /* MyTourDetailViewController.m in Sources */,
+				2BFE8B5018A47940002B2670 /* Walk_ThroughViewController.m in Sources */,
+				2B85594F18ED0C04000CBB73 /* Virtual_TourCreator.m in Sources */,
+				2B85594C18ED0B70000CBB73 /* Virtual_Tour.m in Sources */,
+				2BCD205518B042C700644813 /* ProfileViewController.m in Sources */,
+				2B85595518ED0D0C000CBB73 /* Virtual_TourViewPoint.m in Sources */,
+				2BF2480B18F36E93007A9346 /* MyTourResultsViewController.m in Sources */,
+				2BFE8B4A18A47940002B2670 /* Walk_ThroughAppDelegate.m in Sources */,
+				2B65165918EF680A00B18840 /* SpinnerView.m in Sources */,
+				2C45051418F3E33C00B977A1 /* TakeTourNavigator.m in Sources */,
+				2C45051118F3E31800B977A1 /* TakeTourViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFE8B5318A47940002B2670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFE8B6518A47940002B2670 /* Walk_ThroughTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BFE8B5D18A47940002B2670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BFE8B3518A47940002B2670 /* Walk Through */;
+			targetProxy = 2BFE8B5C18A47940002B2670 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BFE8B4218A47940002B2670 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFE8B4318A47940002B2670 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2BFE8B4B18A47940002B2670 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFE8B4C18A47940002B2670 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BFE8B6118A47940002B2670 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFE8B6218A47940002B2670 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BFE8B6618A47940002B2670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BFE8B6718A47940002B2670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BFE8B6918A47940002B2670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kchalbmaier/Documents/FacebookSDK,
+					/Users/kchalbmaier/Development/FacebookSDK,
+					/Users/kchalbmaier/Development/GoogleSDK,
+					/Users/kaitlyndornbier/Development/FacebookSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Walk Through/Walk Through-Prefix.pch";
+				INFOPLIST_FILE = "Walk Through/Walk Through-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BFE8B6A18A47940002B2670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kchalbmaier/Documents/FacebookSDK,
+					/Users/kchalbmaier/Development/FacebookSDK,
+					/Users/kchalbmaier/Development/GoogleSDK,
+					/Users/kaitlyndornbier/Development/FacebookSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Walk Through/Walk Through-Prefix.pch";
+				INFOPLIST_FILE = "Walk Through/Walk Through-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2BFE8B6C18A47940002B2670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Walk Through.app/Walk Through";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Walk Through/Walk Through-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Walk ThroughTests/Walk ThroughTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2BFE8B6D18A47940002B2670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Walk Through.app/Walk Through";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Walk Through/Walk Through-Prefix.pch";
+				INFOPLIST_FILE = "Walk ThroughTests/Walk ThroughTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BFE8B3118A47940002B2670 /* Build configuration list for PBXProject "Walk Through" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFE8B6618A47940002B2670 /* Debug */,
+				2BFE8B6718A47940002B2670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFE8B6818A47940002B2670 /* Build configuration list for PBXNativeTarget "Walk Through" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFE8B6918A47940002B2670 /* Debug */,
+				2BFE8B6A18A47940002B2670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFE8B6B18A47940002B2670 /* Build configuration list for PBXNativeTarget "Walk ThroughTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFE8B6C18A47940002B2670 /* Debug */,
+				2BFE8B6D18A47940002B2670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BFE8B2E18A47940002B2670 /* Project object */;
+}

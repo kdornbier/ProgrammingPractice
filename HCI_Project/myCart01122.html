@@ -1,0 +1,212 @@
+<!doctype html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css"</link>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascript/homepage.js"></script>
+<script src="javascript/myCart.js"></script>
+<html lang="en">
+
+<script>
+  function deleteChicken(){
+	document.getElementById("chicken").remove();
+	var cartCost = Number(document.getElementById('cartcost').innerHTML);
+	if(cartCost % 10 == 0){
+	  document.getElementById('cartcost').innerHTML = cartCost - 10;
+	} else {
+	  document.getElementById('cartcost').innerHTML = cartCost - (cartCost % 10);
+	}
+	document.getElementById('totalcost').innerHTML = document.getElementById('cartcost').innerHTML
+  }
+  
+  function deleteCake(){
+	document.getElementById("cake").remove();
+	var cartCost = Number(document.getElementById('cartcost').innerHTML);
+	if(cartCost % 10 == 0){
+	  document.getElementById('cartcost').innerHTML = cartCost - 10;
+	} else {
+	  document.getElementById('cartcost').innerHTML = cartCost - (cartCost % 10);
+	}
+	document.getElementById('totalcost').innerHTML = document.getElementById('cartcost').innerHTML
+  }
+  
+  function deletePizza(){
+	document.getElementById("pizza").remove();
+	var cartCost = Number(document.getElementById('cartcost').innerHTML);
+	if(cartCost % 10 == 0){
+	  document.getElementById('cartcost').innerHTML = cartCost - 10;
+	} else {
+	  document.getElementById('cartcost').innerHTML = cartCost - (cartCost % 10);
+	}
+	document.getElementById('totalcost').innerHTML = document.getElementById('cartcost').innerHTML
+  }
+  
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <title>Good 4 U+I</title>
+</head>
+
+<body>
+  <div class="container">
+
+	<div class="row">
+		<div class="col-xs-12">
+		  <div class="navbar navbar-default">
+		  	<div class="container-fluid">
+			  	<ul class="nav nav-pills">		
+			  		<li>  		
+					  	<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    <span class="glyphicon glyphicon-menu-hamburger"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="homepage.html">Home</a></li>
+						    <li><a href="myCart.html">My Cart</a></li>
+						    <li><a href="savedLists.html">Saved Lists</a></li>
+						    <li><a href="profile.html">Profile</a></li>
+						    <li><a href="about.html">About</a></li>
+						    <li><a href="login.html">Logout</a></li>
+						  </ul>
+						</div>
+					</li>
+			  		<li><a href="homepage.html"><span class="glyphicon glyphicon-home"></span></a></li>
+			  		<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span></a></li>
+			  		<li class="active pull-right">
+			  			<a href="myCart.html">
+			  				Cart&nbsp;&nbsp;&nbsp;&nbsp;$<span id="cartcost">20</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			  				<img src="images/meter-unhealthy" id="cart-meter">
+			  			</a>
+			  		</li>
+			  	</ul>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-sm">
+		  <a href="homepage.html" style="padding-bottom:2px; float:left; width:100%">< Home</a>
+			<div style="float:left"><a href=""><span style="color:#2C3E50" class="glyphicon glyphicon-floppy-save"></span></a></div>
+			<div style="float:left"><a href="compare.html">&nbsp;&nbsp;CVS Pharmacy</a></div>
+			<div style="float:right"><a href="homepage.html"class="btn btn-default">See Coupons</a></div>
+		</div>
+	</div>
+  
+	<div class="row">
+		<div class="col-xs-sm">
+			<div class="panel-group" id="accordion">
+			  <div id="cake"class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse2">
+					Chocolate Cake</a>
+					<a onclick="deleteCake()" style="float:right">Delete</a>
+				  </h4>
+				</div>
+				<div id="collapse2" class="panel-collapse collapse in">
+				  <div id="quantity4ID" class="panel-body">Butter or margarine
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+					  $<input type='text' readonly = true name='quantity4price' value='1' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity4' />
+					    <input type='text' name='quantity4' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity4' />
+					</form></div>
+				  </div>
+				  <div class="panel-body">Eggs
+					<div id="quantity5ID" style="float:right"><form id='myform' method='POST' action='#'>
+					  $<input type='text' readonly = true name='quantity5price' value='3' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity5' />
+					    <input type='text' name='quantity5' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity5' />
+					</form></div>
+				  </div>
+				  <div id="quantity6ID" class="panel-body">Sugar
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+					  $<input type='text' readonly = true name='quantity6price' value='2' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity6' />
+					    <input type='text' name='quantity6' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity6' />
+					</form></div>
+				  </div>
+				  <div id="quantity7ID" class="panel-body">Flour
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+					   $<input type='text' readonly = true name='quantity7price' value='1' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity7' />
+					    <input type='text' name='quantity7' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity7' />
+					</form></div>
+				  </div>
+				  <div id="quantity8ID" class="panel-body">Unsweetened cocoa powder
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+					  $<input type='text' readonly = true name='quantity8price' value='2' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity8' />
+					    <input type='text' name='quantity8' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity8' />
+					</form></div>
+				  </div>
+				  <div id="quantity9ID" class="panel-body">Baking soda
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+					  $<input type='text' readonly = true name='quantity9price' value='1' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity9' />
+					    <input type='text' name='quantity9' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity9' />
+					</form></div>
+				  </div>
+				</div>
+			  </div>
+			  <div id="pizza" class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse3">
+					Pizza</a>
+					<a onclick="deletePizza()" style="float:right">Delete</a>
+				  </h4>
+				</div>
+				<div id="collapse3" class="panel-collapse collapse">
+				  <div id="quantity13ID" class="panel-body">Frozen Pizza
+					<div style="float:right"><form id='myform' method='POST' action='#'>
+						$<input type='text' readonly = true name='quantity13price' value='10' style="border: 0px;"/>
+					    <input type='button' value='-' class='qtyminus' field='quantity13' />
+					    <input type='text' name='quantity13' value='1' class='qty' style="width:30px"/>
+					    <input type='button' value='+' class='qtyplus' field='quantity13' />
+					</form></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-sm">
+			<div style="float:left"><a href="savedLists.html"class="btn btn-default">Saved Lists</a></div>
+			<div style="float:left"><a href="homepage.html"class="btn btn-default">Add Meal</a></div>
+			<div style="float:left"><a href="compare.html"class="btn btn-default">Compare Prices</a></div>
+			<div style="float:right; padding-top:2%">Total: $<p style="float:right" id="totalcost">0</p></div>
+			<script>document.getElementById('totalcost').innerHTML = document.getElementById('cartcost').innerHTML</script>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-sm">
+			<div style="float:right"><a href="shoppingList.html"class="btn btn-default">Go Shop!</a></div>
+		</div>
+	</div>
+  	<br>
+	<div class="row">
+		<div class="col-xs-sm">
+		  <div class="panel panel-default">
+		  	<div class="panel-body">
+		  		<h4>Fall 2015 Human Computer Interaction</h1>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+  </div>
+
+</body>
+</html>

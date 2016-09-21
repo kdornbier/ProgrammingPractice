@@ -1,0 +1,89 @@
+<!doctype html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css"</link>
+<script src="javascript/login.js"></script>
+<script>
+  function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+		var validUsr = "hci";
+		var validPass = "hci";
+		
+		document.getElementById("usernameError").innerHTML = "";
+		document.getElementById("passwordError").innerHTML = "";
+		
+        if (username == null || username == "") {
+			document.getElementById("usernameError").innerHTML = "Please enter a username.";		  
+            return false;
+        } else if (username != validUsr) {
+            document.getElementById("usernameError").innerHTML = "Username not valid.";
+            return false;
+        } else if (password == null || password == "") {
+            document.getElementById("passwordError").innerHTML = "Please enter a password.";
+            return false;
+        } else if (password != validPass) {
+            document.getElementById("passwordError").innerHTML = "Incorrect password.";
+            return false;
+        }
+		window.location="homepage.html";
+    }
+  
+</script>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Good 4 U+I</title>
+</head>
+
+<body>
+  <div class="container">
+
+  	<div class="row">
+	  <div class="col-xs-12">
+	  	<div class="page-header">
+	  		<h1>Login</h1>
+	  	</div>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-2"></div>
+			<div class="col-xs-8">
+				<div class="panel panel-default">
+			  		<div class="panel-body">
+			  			<form role="form" onsubmit="login()">
+						  <div class="form-group">
+							<p id="usernameError" style="color:red"></p>
+						    <label for="username">Username:</label>
+						    <input type="username" class="form-control" id="username" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">
+						  </div>
+						  <div class="form-group">
+							<p id="passwordError" style="color:red"></p>
+						    <label for="password">Password:</label>
+						    <input type="password" class="form-control" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">
+						  </div>
+
+						  <input type="button" class="btn btn-default" value="Login" id="submit" onclick="validate();" />
+
+						</form>
+			  		</div>
+			  		<div class="row">
+			  			<div class="col-xs-2"></div>
+						<div class="col-xs-5">
+							<a href="forgotPassword.html">Forgot Password</a>
+						</div>
+						<div class="col-xs-5">
+							<a href="signUp.html">Sign Up</a>
+						</div>
+			  		</div>
+			  	</div>
+			</div>
+		<div class="col-xs-2"></div>
+	</div>
+
+</body>
+</html>
